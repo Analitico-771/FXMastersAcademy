@@ -2,17 +2,21 @@
 
 const express = require("express");
 const router = express.Router();
-const auth = require('../auth');
+// const auth = require('../auth');
 
 
 router.get("/", (req, res) => {
-  res.send("home page");
+  res.render("index");
 });
 
-router.get('/admin/dashboard', auth, (req, res) => {
+router.get("/about", (req, res) => {
+  res.render("about");
+});
+
+// router.get('/admin/dashboard', auth, (req, res) => {
 
 
-  res.send('you made it to the dashboard')
-})
+//   res.send('you made it to the dashboard')
+// })
 
 module.exports = router;

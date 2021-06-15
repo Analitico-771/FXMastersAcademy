@@ -6,5 +6,4 @@
     "host": "batyr.db.elephantsql.com",
     "dialect": "postgres"
   }
-  
 }

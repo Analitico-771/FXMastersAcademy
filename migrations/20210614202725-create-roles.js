@@ -9,10 +9,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       title: {
+        allowNull: false,
         type: Sequelize.STRING
-      },
-      rank: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

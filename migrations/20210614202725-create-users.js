@@ -9,18 +9,23 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       fName: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       lName: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       username: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       password: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       roleID: {

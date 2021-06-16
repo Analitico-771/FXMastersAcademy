@@ -24,6 +24,8 @@ router.post('/registration', async (req, res)=>{
       email: email 
     })
     .then(() =>{
+      // res.send('it worked');
+      console.log(username);
       res.redirect('/login')
     })
   }

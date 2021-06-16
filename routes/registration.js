@@ -23,7 +23,9 @@ router.post('/registration', async (req, res)=>{
       password: passwordEncrypted, 
       email: email 
     })
-    res.redirect('/login')
+    .then(() =>{
+      res.redirect('/login')
+    })
   }
   catch(error){
     res.send(error)

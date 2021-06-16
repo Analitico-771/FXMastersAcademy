@@ -13,7 +13,7 @@ module.exports = {
           lName: 'Doe',
           email: 'john@gmail.com',
           username: 'JohnD',
-          password: '12345', 
+          password: 'doe12345', 
           roleID: 1,
           createdAt: new Date(),
           updatedAt: new Date() 
@@ -24,63 +24,63 @@ module.exports = {
           lName: 'Jordan',
           email: 'mj23@gmail.com',
           username: 'mj23',
-          password: '54321', 
+          password: 'bulls54321', 
           roleID: 1,
           createdAt: new Date(),
           updatedAt: new Date() 
   
         },
         {
-          fName: '',
-          lName: '',
-          email: '',
-          username: '',
-          password: '', 
-          roleID: 36,
+          fName: 'Elon',
+          lName: 'Musk',
+          email: 'tesla@gmail.com',
+          username: 'emusk',
+          password: 'doge1234', 
+          roleID: 1,
           createdAt: new Date(),
           updatedAt: new Date() 
   
         },
         {
-          fName: 'Promises',
-          lName: '',
-          email: '',
-          username: '',
-          password: '', 
-          roleID: 36,
+          fName: 'Michael',
+          lName: 'Williams',
+          email: 'mike@gmail.com',
+          username: 'mikewill',
+          password: 'will246', 
+          roleID: 3,
           createdAt: new Date(),
           updatedAt: new Date() 
   
         },
         {
-          fName: 'Promises',
-          lName: '',
-          email: '',
-          username: '',
-          password: '', 
-          roleID: 36,
+          fName: 'Floyd',
+          lName: 'Mayweather',
+          email: 'moneymay@gmail.com',
+          username: 'moneymay',
+          password: 'money135', 
+          roleID: 1,
           createdAt: new Date(),
           updatedAt: new Date() 
   
         },
         {
-          fName: 'Promises',
-          lName: '',
-          email: '',
-          username: '',
-          password: '', 
-          roleID: 36,
+          fName: 'Brandon',
+          lName: 'Stinson',
+          email: 'brand@gmail.com',
+          username: 'bstinson',
+          password: 'dc9876', 
+          roleID: 3,
           createdAt: new Date(),
           updatedAt: new Date() 
   
         },
         {
-          fName: 'Promises',
-          lName: '',
-          email: '',
-          username: '',
-          password: '', 
-          roleID: 36,
+          fName: 'Syreeta',
+          lName: 'Greene',
+          email: 'greene@gamil.com',
+          username: 'rio',
+          password: 'abcd1234', 
+          roleID: 3,
           createdAt: new Date(),
           updatedAt: new Date() 
   

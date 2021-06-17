@@ -21,7 +21,8 @@ router.post('/registration', async (req, res)=>{
       lName: lName,
       username: username, 
       password: passwordEncrypted, 
-      email: email 
+      email: email,
+      roleID: 1
     })
     .then(() =>{
       // res.send('it worked');

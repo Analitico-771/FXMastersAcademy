@@ -30,7 +30,7 @@ passport.use(new LocalStrategy( async (username, password, done)=>{
           if(response){
             //this means a match, user has correct password
             console.log('break3');
-            done(null, {id: record.id, username: record.username})
+            done(null, {id: record.id, username: record.username, roleID:record.roleID})
           }
           else{
             //passwords didn't match
@@ -52,23 +52,34 @@ passport.use(new LocalStrategy( async (username, password, done)=>{
 }))
 
 router.post('/login', passport.authenticate('local', {failureRedirect: '/login'}), 
-(req, res) => {
+async (req, res) => {
   console.log(`inside of login ${req.isAuthenticated()}`);
+  console.log(req.user.roleID);
+  console.log(req.user.id);
+  
   res.send('you made it through')
+  
 
   //grab userLevel and res.render intermediate or basic page according to user Level
   // useLevel pages are in the Views folder
-
+  // res.render('/basic')
+  
 })
 
 passport.serializeUser((user, done)=>{
   //passport is adding information to the sessions {id:"", username:""}
-  done(null, user.id)
+  done(null, user)
 })
 
-passport.deserializeUser(async (id, done)=>{
+router.get('/test', (req, res) => {
+  
+  res.send('test')
+})
+
+
+passport.deserializeUser(async (user, done)=>{
   console.log('deserializing user');
-  done(null, id)
+  done(null, user)
   // try{
   //   //additional security 
   //   //checking to see if user is valid with the cookie that was passed 

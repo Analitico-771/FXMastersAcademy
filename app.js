@@ -21,8 +21,10 @@ app.set('view engine', 'ejs')
 //! do this also
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.urlencoded({extended: false}));
+
+app.use(express.urlencoded({extended: false}));//Body parser
 app.use(express.json());
+
 //routes 
 app.use(require('./routes/login')) 
 app.use(require('./routes/index'))

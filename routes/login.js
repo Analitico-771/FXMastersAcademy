@@ -21,20 +21,20 @@ passport.use(new LocalStrategy( async (username, password, done)=>{
     // make db call to check if username is in our db
     let records = await db.users.findAll({where: {username: username}});
     //[{}]
-    console.log('break1');
+    // console.log('break1');
     if(records != null){
       // check passwords
       let record = records[0];
-      console.log('break2', record);
+      // console.log('break2', record);
       bcrypt.compare(password, record.password, (err, response)=>{
           if(response){
             //this means a match, user has correct password
-            console.log('break3');
-            done(null, {id: record.id, username: record.username, roleID:record.roleID})
+            // console.log('break3');
+            done(null, {id: record.id, fName: record.fName, username: record.username, roleID:record.roleID})
           }
           else{
             //passwords didn't match
-            console.log('break4', err);
+            // console.log('break4', err);
             done(null, false)
           }
       })
@@ -53,11 +53,18 @@ passport.use(new LocalStrategy( async (username, password, done)=>{
 
 router.post('/login', passport.authenticate('local', {failureRedirect: '/login'}), 
 async (req, res) => {
-  console.log(`inside of login ${req.isAuthenticated()}`);
-  console.log(req.user.roleID);
-  console.log(req.user.id);
+  // console.log(`inside of login ${req.isAuthenticated()}`);
+  // console.log(req.user.roleID);
+  // console.log(req.user.id);
+  // console.log(req.user.fName);
   
-  res.send('you made it through')
+  // res.send('you made it through')
+  res.redirect('/fxacademy')
+  // res.render('fxacademy', {
+  //   id: req.user.id,
+  //   roleID: req.user.roleID,
+  //   fName: req.user.fName
+  // })
   
 
   //grab userLevel and res.render intermediate or basic page according to user Level
@@ -71,14 +78,22 @@ passport.serializeUser((user, done)=>{
   done(null, user)
 })
 
-router.get('/test', (req, res) => {
+// router.get('/test', (req, res) => {
   
-  res.send('test')
+//   res.send('test')
+// })
+
+router.get('/fxacademy', (req, res) => {
+  res.render('fxacademy', {
+    id: req.user.id,
+    roleID: req.user.roleID,
+    fName: req.user.fName
+  })
 })
 
 
 passport.deserializeUser(async (user, done)=>{
-  console.log('deserializing user');
+  // console.log('deserializing user');
   done(null, user)
   // try{
   //   //additional security 

@@ -140,14 +140,14 @@
 	font-size: 1.25rem;
 	font-weight: 700;
 	margin: 0 0 .625rem;
-	color: #ffffff;
+	color: #000000;
 }
 
 .timeline__content p {
 	font-size: .9375rem;
 	line-height: 1.5;
 	margin-bottom: 10px;
-	color: #ffffff;
+	color: #000000;
 }
 
 .timeline--horizontal {

@@ -32,7 +32,6 @@ app.use(require('./routes/about'))
 app.use(require('./routes/teachers'))
 app.use(require('./routes/contact'))
 app.use(require('./routes/registration'))
-// app.use(require('./routes/fxacademy'))
 
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`);

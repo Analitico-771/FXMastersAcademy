@@ -8,7 +8,7 @@ const cookieSession = require('cookie-session');
 //! do this
 
 const passport = require('passport');
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 8080;
 
 //public
 

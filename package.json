@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node ./app.js"
+    "start":"node ./bin/www"
   },
   "keywords": [],
   "author": "",
@@ -31,5 +31,5 @@
     "url": "https://github.com/AnaIitico/FXMastersAcademy/issues"
   },
   "homepage": "https://github.com/AnaIitico/FXMastersAcademy#readme"
-  
+
 }

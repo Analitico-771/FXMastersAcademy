@@ -1,7 +1,7 @@
 {
   "name": "fxmastersacademy",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. The Purpose of the app/website that we are building\r - FX Masters Academy is a provider of training in the Forex Trading Industry.  We provide Forex Trading Training with a library of video content and live instructor training.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,14 @@
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.6.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnaIitico/FXMastersAcademy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnaIitico/FXMastersAcademy/issues"
+  },
+  "homepage": "https://github.com/AnaIitico/FXMastersAcademy#readme"
 }

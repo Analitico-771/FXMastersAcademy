@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include ('partials/structure/head.ejs') %>
+	<%- include ('partials/structure/head.ejs') %>
+	<style>
+
+		.fxp {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size:x-large;
+			color: #8b2222;
+			text-shadow: 2px 2px #050505;
+			font-size: 40px;
+			text-decoration: underline
+		}
+		.fxh1 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size:x-large;
+			color: #22658b;
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.fxh2 {
+			font-family: Arial, Helvetica, sans-serif; color: #22658b; font-size: larger;
+			margin-left: 25px;
+		}
+
+		.fxh3 {
+			font-family: Arial, Helvetica, sans-serif; color: #eea412; font-size: x-large;
+			margin-top: 10px;
+			text-shadow: 2px 2px #050505;
+		}
+	</style>
 
 </head>
 <body class="host_version"> 
@@ -25,105 +53,78 @@
 		
 	</header>
 	<!-- End header -->
-	Welcome <%= `${fName}` %>
-	<h1><%= `${id}` %> </h1>
-	<h1><%= `${roleID}` %> </h1>
-	<h1><%= `${fName}` %> </h1>
+	<h1 class="fxh1">Welcome to FxMasters Trading Academy: <%= `${fName}` %>!</h1>
+	
+	<% if (roleID == 1) { %>
+			<h2 class="fxh2">You have access to Basic trading training</h2>
+	<% } %><% if (roleID == 2) { %>
+		<h2 class="fxh2">You have access to Basic and Intermediate trading training</h2>
+	<% } %>
 
+	<% if (roleID == 3 || roleID == 4) { %>
+		<h2 class="fxh2">You are Staff</h2>
+	<% } %>
+
+	<div id="teachers" class="section wb">
+        <div class="container">
+            <div class="column" style="text-align: center;">
+
+				<p class="fxp">Basic Training</p>
+				
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">1. What Is Forex.mp4</h3>
+                    <div style="padding:56.25% 0 0 0;position:relative"><iframe src="https://player.vimeo.com/video/564401325?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width: 100%;height: 100%;" title="1 What Is Forex.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</div>
+
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">2. Who Controls The Market</h3>
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564404346?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:  100%;height: 100%;;" title="2 Who Controls The Market"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</div>
+
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">3. Buying Vs Selling</h3>
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564404511?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:  100%;height: 100%;" title="3 Buying Vs Selling"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</div>
+
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">4. Curency Pairs and Quotes</h3>
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564404617?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:  100%;height: 100%;" title="4 Curency Pairs and Quotes"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</div>
+				
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">5. What Is A Pip</h3>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564405690?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="5 What Is A Pip"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
 
 	<% if (roleID != 1) { %>
 
-	<h1>You are Intermediate</h1>
-	
-	<div class="all-title-box">
-		<div class="container text-center">
-			<h1>Teachers<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
-		</div>
-	</div>
-	
 	<div id="teachers" class="section wb">
         <div class="container">
-            <div class="columns" style="border: 5px solid black;">
-				<div class="col-lg-3 col-md-6 col-12" style="border: 5px solid red;">
-					<!-- <div class="our-team">
-						<div class="team-img">
-							<img src="images/team-01.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Williamson</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div> -->
-                    <div style="padding:56.25% 0 0 0;position:relative;">
-                        <iframe src="https://player.vimeo.com/video/564401325?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="1 What Is Forex.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <div class="column" style="text-align: center;">
+
+				<p class="fxp">Intermediate Training</p>
+
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">1. Charting Basics</h3>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564406796?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="1 Charting Basics"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 				</div>
 
-				<div class="col-lg-3 col-md-6 col-12" style="border: 5px solid orange;">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-02.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Kristiana</h3>
-							<span class="post">Web Designer</span>
-						</div>
-					</div>
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">2. Support And Resistance</h3>
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564406833?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2 Support And Resistance"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 				</div>
 
-				<div class="col-lg-3 col-md-6 col-12" style="border: 5px solid purple;">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-03.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Steve Thomas</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div>
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">3. Candlestick Patterns Part 1</h3>
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564406909?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="3 Candlestick Patterns Part 1"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 				</div>
 
-				<div class="col-lg-3 col-md-6 col-12" style="border: 5px solid rgb(21, 255, 0);">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-04.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Miranda joy</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div>
+				<div class="videodiv col-md-6 col-12">
+					<h3 class="fxh3">4. Candlestick Patterns Part 2</h3>
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564406966?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="4 Candlestick Patterns Part 2"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 				</div>
             </div><!-- end row -->
         </div><!-- end container -->

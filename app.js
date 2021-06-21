@@ -29,7 +29,6 @@ app.use(express.json());
 app.use(require('./routes/login')) 
 app.use(require('./routes/index'))
 app.use(require('./routes/about'))
-app.use(require('./routes/teachers'))
 app.use(require('./routes/contact'))
 app.use(require('./routes/registration'))
 

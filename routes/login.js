@@ -57,7 +57,6 @@ async (req, res) => {
   // console.log(req.user.roleID);
   // console.log(req.user.id);
   // console.log(req.user.fName);
-  
   // res.send('you made it through')
   res.redirect('/fxacademy')
   // res.render('fxacademy', {

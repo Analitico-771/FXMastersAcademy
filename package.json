@@ -4,7 +4,8 @@
   "description": "1. The Purpose of the app/website that we are building\r - FX Masters Academy is a provider of training in the Forex Trading Industry.  We provide Forex Trading Training with a library of video content and live instructor training.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node ./app.js"
   },
   "keywords": [],
   "author": "",

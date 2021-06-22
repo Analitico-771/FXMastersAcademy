@@ -2,22 +2,29 @@
 
 const express = require('express');
 const app = express();
+
 const helmet = require('helmet');
 const cookieSession = require('cookie-session');
 //! do this
+
 const passport = require('passport');
-let PORT = 3000;
+const port = process.env.PORT || 8080;
+
 //public
+
 app.use(express.static('public'));
 app.use(helmet());
+
 //cookie-session 
 app.use(cookieSession({
     name: 'session',
     keys: ['lskdfjl;sj;lasjdfl;ajsld;fjasl;djflasjdflsak'], 
     maxAge: 14 * 24  * 60 * 60 * 1000
 }))
+
 //views
 app.set('view engine', 'ejs')
+
 //! do this also
 app.use(passport.initialize());
 app.use(passport.session());
@@ -32,6 +39,6 @@ app.use(require('./routes/about'))
 app.use(require('./routes/contact'))
 app.use(require('./routes/registration'))
 
-app.listen(PORT, ()=>{
-    console.log(`listening on port ${PORT}`);
+app.listen(port, ()=>{
+    console.log(`listening on port ${port}`);
 })
